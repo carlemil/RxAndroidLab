@@ -9,7 +9,6 @@ import com.google.gson.Gson;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import rx.Observable;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -59,8 +58,11 @@ public class MainActivity extends AppCompatActivity {
 //        https://square.github.io/retrofit/
 //        And the json file can be found online at:
 //        https://raw.githubusercontent.com/carlemil/RxAndroidLab/master/weather.json
+//        The observable will now contain a array, just like before we will need to unwrap
+//        the array into a stream. This can be done using a operator called flatmap and the
+//        .from operator.
 
-
+        
 //        5. Bind the button onclicklistener using Rx, only perform the fetch of the
 //        above json when the button is pressed.
 //        https://github.com/JakeWharton/RxBinding
